@@ -6,13 +6,15 @@ use Illuminate\Http\Request;
 use App\Models\Page;
 class PageController extends Controller
 {
-    public function index(Request $request)
+    public function index(Request $request1)
     {
-        $url = $request->path();
+        $url = $request1->path();
         $page = Page::where('path', $url)->first();
-        if ($request->is('index')) {
+        if ($request1->is('index')) {
             return view('index', ['page' => $page]);
         }
 
     }
+
+
 }

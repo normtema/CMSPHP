@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('{url}', ['as' => 'page::read',
     'uses' => '\App\Http\Controllers\PageController@index'
 ]);
+
